@@ -1,0 +1,3 @@
+# Project Goal:
+
+This aim of this project is to create an online space to democratize the compilation and sharing of information relating to libraries in London. In it’s most basic form, the website should hold a map showing libraries in London. Information about these libraries should be entirely contributed by members who sign up to the website. Informations might include; pictures, descriptions, comments, questions, guides, events and ratings. The website will be used by people who are passionate about libraries and who want to visit libraries. As a whole, the information compiled on this website should encourage more people to visit libraries. 
