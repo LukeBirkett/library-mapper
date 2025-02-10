@@ -96,4 +96,45 @@ curl -X POST $API_URL/libraries \
         "postcode": "INVALID"
     }
 }'
+echo -e "\n"
+
+echo "9️⃣  Testing Library Creation with Invalid Opening Hours (Should Fail)"
+curl -X POST $API_URL/libraries \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $TOKEN" \
+-d '{
+    "name": "Test Library",
+    "address": {
+        "street": "123 Library Street",
+        "city": "London",
+        "postcode": "SW1A 1AA",
+        "borough": "Westminster"
+    },
+    "location": {
+        "coordinates": [-0.1276, 51.5074]
+    },
+    "openingHours": {
+        "monday": { "open": "10:00", "close": "09:00" },
+        "tuesday": { "open": "invalid", "close": "17:00" },
+        "wednesday": { "open": "10:00" }
+    }
+}'
+echo -e "\n"
+
+echo "🔟 Testing Library Creation without Opening Hours (Should Pass)"
+curl -X POST $API_URL/libraries \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $TOKEN" \
+-d '{
+    "name": "Test Library No Hours",
+    "address": {
+        "street": "123 Library Street",
+        "city": "London",
+        "postcode": "SW1A 1AA",
+        "borough": "Westminster"
+    },
+    "location": {
+        "coordinates": [-0.1276, 51.5074]
+    }
+}'
 echo -e "\n" 
