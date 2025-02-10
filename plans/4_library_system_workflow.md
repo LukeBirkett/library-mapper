@@ -79,12 +79,32 @@ This document outlines the step-by-step implementation of the Library Informatio
 
 ### 4. Data Validation & Error Handling
 - [ ] Input Validation
-  - [ ] Required fields
-  - [ ] Data format
-  - [ ] Coordinate validation
+  - [✅] Basic Field Validation
+    - [✅] Name (required, length)
+    - [✅] Address (required fields, postcode format)
+    - [✅] Coordinates (ranges, required)
+   
+  - [ ] Operating Hours Validation
+    - [✅] Optional field
+    - [✅] Time format when provided (HH:MM)
+    - [✅] Open/close logic when provided
+    - [✅] Paired times (open and close together)
+   
+  - [ ] Content Validation
+    - [ ] Description format
+    - [ ] Character limits
+    - [ ] Content rules
+   
+  - [ ] Business Logic Validation
+    - [ ] London boundary check
+    - [ ] Borough/location match
+    - [ ] Duplicate detection
 
 - [ ] Error Responses
-  - [ ] Validation errors
+  - [✅] Validation errors
+    - [✅] Field-specific messages
+    - [✅] Format validation
+    - [✅] Required field checks
   - [✅] Authentication errors
   - [✅] Not found errors
   - [✅] Server errors
