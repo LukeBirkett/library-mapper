@@ -15,6 +15,7 @@ console.log('Environment variables:', {
 });
 
 const authRoutes = require('./routes/auth');
+const libraryRoutes = require('./routes/libraries');
 
 const app = express();
 
@@ -30,6 +31,7 @@ app.get('/', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/libraries', libraryRoutes);
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI, {
