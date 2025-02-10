@@ -47,24 +47,24 @@ This document outlines the step-by-step implementation of the Library Informatio
   - [✅] Update library details
   - [✅] Delete library entry
 
-- [ ] Advanced Operations
-  - [ ] Search functionality
-  - [ ] Geolocation queries
-  - [ ] Filtering options
-  - [ ] Pagination
+- [🔜] Advanced Operations
+  - [🔜] Search functionality
+  - [🔜] Geolocation queries
+  - [🔜] Filtering options
+  - [🔜] Pagination
 
 ### 2. Route Implementation
 - [✅] Public Routes
   - [✅] Get all libraries
   - [✅] Get single library
-  - [ ] Search libraries
-  - [ ] Filter by location/borough
+  - [🔜] Search libraries
+  - [🔜] Filter by location/borough
 
 - [✅] Protected Routes
   - [✅] Create library
   - [✅] Update library
   - [✅] Delete library
-  - [ ] Add photos
+  - [📸] Add photos (See: 5_photo_implementation.md)
 
 ### 3. Authentication & Authorization
 - [✅] Middleware Integration
@@ -75,7 +75,7 @@ This document outlines the step-by-step implementation of the Library Informatio
 - [ ] User Contribution Tracking
   - [✅] Update user's contribution list
   - [ ] Track library modifications
-  - [ ] Handle photo uploads
+  - [📸] Handle photo uploads (See: 5_photo_implementation.md)
 
 ### 4. Data Validation & Error Handling
 - [ ] Input Validation

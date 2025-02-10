@@ -83,4 +83,17 @@ echo -e "\n"
 echo "7️⃣  Testing Delete Non-Existent Library (Should Fail)"
 curl -X DELETE "$API_URL/libraries/123456789012345678901234" \
 -H "Authorization: Bearer $TOKEN"
+echo -e "\n"
+
+echo "8️⃣  Testing Library Creation with Invalid Data (Should Fail)"
+curl -X POST $API_URL/libraries \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $TOKEN" \
+-d '{
+    "name": "A",
+    "address": {
+        "street": "",
+        "postcode": "INVALID"
+    }
+}'
 echo -e "\n" 
