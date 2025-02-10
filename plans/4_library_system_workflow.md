@@ -1,14 +1,42 @@
 # Library Information System Implementation Workflow
 
+## Definition
+
+The Library Information System is the core component of our application that manages all library-related data and operations. It serves as a centralized system for:
+
+1. **Data Management**
+   - Storing library information (locations, hours, facilities)
+   - Managing media content (photos, documents)
+   - Tracking user contributions and interactions
+
+2. **Community Engagement**
+   - Enabling users to add and update library information
+   - Collecting user ratings and reviews
+   - Facilitating information sharing
+
+3. **Information Access**
+   - Providing searchable library data
+   - Supporting map-based discovery
+   - Delivering filtered and sorted results
+
+We are building this system to:
+- Democratize information about London's libraries
+- Create a reliable, community-driven database
+- Enable easy discovery of library locations and services
+- Encourage library visits through better information access
+- Support community engagement with local libraries
+
+This system forms the backbone of our application, connecting the User Management System with the frontend map interface and providing the data structure needed for all library-related features.
+
 ## Overview
 This document outlines the step-by-step implementation of the Library Information System, building upon our existing User Management System.
 
-## Prerequisites ✅
-- User Management System implemented
-- MongoDB connection established
-- Authentication middleware working
-- Library model created
-- Test cases prepared
+## Prerequisites
+- ✅ User Management System implemented
+- ✅ MongoDB connection established
+- ❌ Authentication middleware working
+- ✅ Library model created
+- ✅ Test cases prepared
 
 ## Implementation Phases
 
