@@ -1,4 +1,6 @@
-const validateLibrary = (req, res, next) => {
+const { checkForDuplicates } = require('../utils/duplicateCheck');
+
+const validateLibrary = async (req, res, next) => {
     const { name, address, location, openingHours } = req.body;
     const errors = [];
     const isUpdate = req.method === 'PUT' || req.method === 'PATCH';
@@ -86,6 +88,25 @@ const validateLibrary = (req, res, next) => {
             success: false,
             errors: errors
         });
+    }
+
+    // Check for duplicates (only on creation)
+    if (!isUpdate) {
+        try {
+            const duplicates = await checkForDuplicates(req.body);
+            if (duplicates.length > 0) {
+                return res.status(400).json({
+                    success: false,
+                    warning: 'Possible duplicate library',
+                    duplicates: duplicates
+                });
+            }
+        } catch (error) {
+            return res.status(500).json({
+                success: false,
+                error: 'Error checking for duplicates'
+            });
+        }
     }
 
     next();

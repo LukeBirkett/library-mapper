@@ -84,23 +84,26 @@ This document outlines the step-by-step implementation of the Library Informatio
     - [✅] Address (required fields, postcode format)
     - [✅] Coordinates (ranges, required)
    
-  - [ ] Operating Hours Validation
+  - [✅] Operating Hours Validation
     - [✅] Optional field
     - [✅] Time format when provided (HH:MM)
     - [✅] Open/close logic when provided
     - [✅] Paired times (open and close together)
    
-  - [ ] Content Validation
-    - [ ] Description format
-    - [ ] Character limits
-    - [ ] Content rules
+  - [🔜] Content Validation
+    - [🔜] Description format
+    - [🔜] Character limits
+    - [🔜] Content rules
    
-  - [ ] Business Logic Validation
-    - [ ] London boundary check
-    - [ ] Borough/location match
-    - [ ] Duplicate detection
+  - [🔜] Business Logic Validation
+    - [🔜] London boundary check
+    - [🔜] Borough/location match
+    - [✅] Duplicate detection
+      - [✅] Exact address match
+      - [✅] Nearby similar names
+      - [✅] Warning response format
 
-- [ ] Error Responses
+- [✅] Error Responses
   - [✅] Validation errors
     - [✅] Field-specific messages
     - [✅] Format validation
