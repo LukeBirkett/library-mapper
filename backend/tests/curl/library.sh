@@ -137,4 +137,22 @@ curl -X POST $API_URL/libraries \
         "coordinates": [-0.1276, 51.5074]
     }
 }'
+echo -e "\n"
+
+echo "1️⃣1️⃣ Testing Duplicate Library Creation (Should Warn)"
+curl -X POST $API_URL/libraries \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer $TOKEN" \
+-d '{
+    "name": "Test Library",
+    "address": {
+        "street": "123 Library Street",
+        "city": "London",
+        "postcode": "SW1A 1AA",
+        "borough": "Westminster"
+    },
+    "location": {
+        "coordinates": [-0.1276, 51.5074]
+    }
+}'
 echo -e "\n" 
